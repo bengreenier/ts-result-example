@@ -1,0 +1,13 @@
+.*
+.vscode/
+
+coverage/
+dist/docs/
+temp/
+src/
+
+api-extractor.json
+tsconfig.json
+babel.config.js
+
+CONTRIBUTING.md
