@@ -134,13 +134,15 @@ describe("work", () => {
       .catch((err) => {
         if (err instanceof BaseError) {
           expect(err.message).toBe("Failure forced for loadPokemonSpecies");
-          cb();
         }
       })
       .then(() => {
         // additional work, but no access to species
         // this work always runs, cause we catch before it
         console.log("i ran last");
+
+        // this is just us signalling to jest that the test is over
+        cb();
       });
 
     // if we put code here, in the sync context, it would run first
